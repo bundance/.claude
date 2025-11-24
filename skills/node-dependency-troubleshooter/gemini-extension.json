@@ -1,0 +1,46 @@
+{
+  "name": "node-dependency-troubleshooter",
+  "displayName": "Node Dependency Troubleshooter",
+  "version": "1.0.0",
+  "description": "Comprehensive Node.js dependency troubleshooting for npm, yarn, pnpm, and related tooling. Use when encountering package installation failures, module resolution errors, TypeScript/ESLint configuration issues, version mismatches, lock file conflicts, peer dependency warnings, or Expo SDK dependency issues.",
+  "author": "Your Name",
+  "repository": "",
+  "license": "MIT",
+  "triggers": [
+    "dependency error",
+    "npm install failing",
+    "yarn error",
+    "pnpm error",
+    "module not found",
+    "TypeScript config issue",
+    "eslint not working",
+    "cannot find module",
+    "peer dependency",
+    "ERESOLVE",
+    "package manager error",
+    "build tool error"
+  ],
+  "excludeTools": [
+    "webSearch",
+    "webFetch"
+  ],
+  "settings": [],
+  "contextFiles": [
+    "GEMINI.md",
+    "references/*.md"
+  ],
+  "scripts": {
+    "diagnose": "python3 scripts/diagnose.py",
+    "check-node": "python3 scripts/check_node_version.py",
+    "analyze-lock": "python3 scripts/analyze_package_lock.py",
+    "visualize-tree": "python3 scripts/dependency-tree-visualizer.py",
+    "audit": "python3 scripts/npm-audit-analyzer.py",
+    "check-breaking": "python3 scripts/breaking-change-checker.py",
+    "analyze-bundle": "python3 scripts/bundle-size-analyzer.py",
+    "resolve-peers": "python3 scripts/peer-dep-resolver.py",
+    "check-monorepo": "python3 scripts/monorepo-checker.py",
+    "validate-ts": "python3 scripts/typescript-config-validator.py",
+    "resolve-eslint": "python3 scripts/eslint-config-resolver.py",
+    "react-native-doctor": "python3 scripts/react-native-doctor.py"
+  }
+}
